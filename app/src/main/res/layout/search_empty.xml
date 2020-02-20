@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/no_checks_description_text"
+        style="@style/TextThink300"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/there_are_no_albums_description"
+        android:textColor="?attr/colorOnBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/search_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:tint="?attr/colorOnBackground"
+        app:layout_constraintEnd_toEndOf="@+id/no_checks_description_text"
+        app:layout_constraintStart_toStartOf="@+id/no_checks_description_text"
+        app:layout_constraintTop_toBottomOf="@+id/no_checks_description_text"
+        app:srcCompat="@drawable/ic_search_large" />
+
+    <TextView
+        android:id="@+id/click_here_text"
+        style="@style/TextThink200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/click_here"
+        app:layout_constraintEnd_toEndOf="@+id/search_icon"
+        app:layout_constraintStart_toStartOf="@+id/search_icon"
+        app:layout_constraintTop_toBottomOf="@+id/search_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

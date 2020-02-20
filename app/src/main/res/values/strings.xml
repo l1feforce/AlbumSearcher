@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AlbumSearcher</string>
+    <string name="search_hint">Enter album name</string>
+    <string name="search_title">Search title</string>
+    <string name="there_are_no_albums_description">There are no albums yet. \nMake a new search!</string>
+
+    <string name="album_title">Album title</string>
+    <string name="author_name">Author name</string>
+    <string name="song_name">Song name</string>
+    <string name="label_name">Label name</string>
+    <string name="network_error">Network error</string>
+    <string name="error">Error</string>
+    <string name="empty_list_error">Empty result</string>
+    <string name="click_here">Click here for search.</string>
+</resources>

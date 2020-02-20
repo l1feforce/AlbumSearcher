@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AlbumDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/album_artwork_icon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginLeft="128dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="128dp"
+            android:layout_marginRight="128dp"
+            android:src="@drawable/ic_artwork"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/album_title_text"
+            style="@style/TextBold300"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/album_title"
+            app:layout_constraintEnd_toEndOf="@+id/album_artwork_icon"
+            app:layout_constraintStart_toStartOf="@+id/album_artwork_icon"
+            app:layout_constraintTop_toBottomOf="@+id/album_artwork_icon" />
+
+        <TextView
+            android:id="@+id/author_text"
+            style="@style/TextThink200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/author_name"
+            app:layout_constraintEnd_toEndOf="@+id/album_title_text"
+            app:layout_constraintStart_toStartOf="@+id/album_title_text"
+            app:layout_constraintTop_toBottomOf="@+id/album_title_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/songs_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/author_text"
+            tools:itemCount="4"
+            tools:listitem="@layout/song_item" />
+
+        <TextView
+            android:id="@+id/label_text"
+            style="@style/TextItalic200"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/label_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/songs_recycler"
+            app:layout_constraintStart_toStartOf="@+id/songs_recycler"
+            app:layout_constraintTop_toBottomOf="@+id/songs_recycler" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
